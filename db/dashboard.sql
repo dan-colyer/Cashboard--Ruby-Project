@@ -17,6 +17,7 @@ CREATE TABLE merchants
 CREATE TABLE transactions
 (
   id SERIAL8 primary key,
+  description VARCHAR(255),
   merchant_id INT8 references merchants(id),
   tag_id INT8 references tags(id),
   amount INT8,
