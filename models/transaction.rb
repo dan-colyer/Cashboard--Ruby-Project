@@ -1,7 +1,8 @@
 require_relative('../db/sql_runner.rb')
 
 class Transaction
-  attr_reader :id, :description, :merchant_id, :tag_id, :amount, :transaction_date
+  attr_reader :id
+  attr_accessor :description, :merchant_id, :tag_id, :amount, :transaction_date
 
   def initialize(options)
     @id = options["id"].to_i
@@ -41,5 +42,13 @@ class Transaction
     SqlRunner.run(sql, values)
   end
 
+  def update()
+    sql = "UPDATE transactions
+          SET (description, merchant_id, tag_id, amount, transaction_date)
+          = ($1, $2, $3, $4, $5)
+          WHERE id = $6"
+    values = [@description, @merchant_id, @tag_id, @amount, @transaction_date, @id]
+    SqlRunner.run(sql, values)
+  end
 
 end
