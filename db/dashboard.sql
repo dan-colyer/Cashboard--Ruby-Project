@@ -18,8 +18,8 @@ CREATE TABLE transactions
 (
   id SERIAL8 primary key,
   description VARCHAR(255),
-  merchant_id INT8 references merchants(id),
-  tag_id INT8 references tags(id),
+  merchant_id INT8 references merchants(id) ON DELETE CASCADE,
+  tag_id INT8 references tags(id) ON DELETE CASCADE,
   amount INT8,
   transaction_date DATE
 );
