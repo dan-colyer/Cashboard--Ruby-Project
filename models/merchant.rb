@@ -18,4 +18,11 @@ class Merchant
     results = SqlRunner.run(sql, values)
     @id = results.first()["id"].to_i
   end
+
+  def self.all()
+    sql = "SELECT * FROM merchants"
+    values =[]
+    results = SqlRunner.run(sql, values)
+    return results.map {|result| Merchant.new(result)}
+  end
 end
