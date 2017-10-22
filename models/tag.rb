@@ -7,4 +7,15 @@ class Tag
     @id = options["id"].to_i
     @type = options["type"]
   end
+
+  def save()
+    sql = "INSERT INTO tags
+          (type)
+          VALUES
+          ($1)
+          RETURNING id"
+    values = [@type]
+    results = SqlRunner.run(sql, values)
+    @id = results.first()["id"].to_i
+  end
 end
