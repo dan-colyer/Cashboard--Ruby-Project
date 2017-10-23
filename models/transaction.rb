@@ -51,4 +51,27 @@ class Transaction
     SqlRunner.run(sql, values)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM transactions
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run( sql, values )
+    return Transaction.new( results.first )
+  end
+
+  def merchant()
+
+  end
+
 end
+
+# - Display total amount spent
+# - Display total amount spent by tag
+
+# def victim()
+#   sql = "SELECT * FROM victims
+#   WHERE id = $1"
+#   values = [@victim_id]
+#   results = SqlRunner.run( sql, values )
+#   return Victim.new( results.first )
+# end
