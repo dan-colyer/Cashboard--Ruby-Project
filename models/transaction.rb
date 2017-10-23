@@ -103,7 +103,24 @@ class Transaction
     results = SqlRunner.run(sql, values)
     return results.first["sum"].to_f
   end
+
+  def self.total_spend_by_tag(type)
+    sql = "SELECT tags.type, SUM(transactions.amount) as sum
+          FROM tags
+          INNER JOIN transactions
+          ON tags.id = transactions.tag_id
+          WHERE type = $1
+          GROUP BY tags.type"
+    values = [type]
+    results = SqlRunner.run(sql, values)
+    return results.first["sum"].to_f
+  end
 end
+
+# SELECT a.[CUSTOMER ID], a.[NAME], SUM(b.[AMOUNT]) AS [TOTAL AMOUNT]
+# FROM RES_DATA a INNER JOIN INV_DATA b
+# ON a.[CUSTOMER ID]=b.[CUSTOMER ID]
+# GROUP BY a.[CUSTOMER ID], a.[NAME]
 
 # - Display total amount spent
 # - Display total amount spent by tag
