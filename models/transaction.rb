@@ -115,6 +115,18 @@ class Transaction
     results = SqlRunner.run(sql, values)
     return results.first["sum"].to_f
   end
+
+  def self.total_spend_by_merchant(name)
+    sql = "SELECT merchants.name, SUM(transactions.amount) as sum
+          FROM merchants
+          INNER JOIN transactions
+          ON merchants.id = transactions.merchant_id
+          WHERE name = $1
+          GROUP BY merchants.name"
+    values = [name]
+    results = SqlRunner.run(sql, values)
+    return results.first["sum"].to_f
+  end
 end
 
 # SELECT a.[CUSTOMER ID], a.[NAME], SUM(b.[AMOUNT]) AS [TOTAL AMOUNT]
