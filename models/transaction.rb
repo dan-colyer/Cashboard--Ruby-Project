@@ -96,6 +96,13 @@ class Transaction
     results = SqlRunner.run(sql, values)
     return results.map{|result| Transaction.new(result)}
   end
+
+  def self.total_spend()
+    sql = "SELECT SUM(amount) as sum FROM transactions"
+    values = []
+    results = SqlRunner.run(sql, values)
+    return results.first["sum"].to_f
+  end
 end
 
 # - Display total amount spent
