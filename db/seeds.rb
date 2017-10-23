@@ -61,6 +61,14 @@ transaction3 = Transaction.new({
   })
 transaction3.save
 
+transaction4 = Transaction.new({
+  "description" => "Apple Home Pod",
+  "merchant_id" => merchant1.id,
+  "tag_id" => tag1.id,
+  "amount" => 399,
+  "transaction_date" => "2017-10-23"
+  })
+transaction4.save
 
 binding.pry
 nil

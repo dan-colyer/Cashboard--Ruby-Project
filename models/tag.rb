@@ -34,13 +34,21 @@ class Tag
     SqlRunner.run(sql, values)
   end
 
-  def update() # GET HELP!
+  def update()
     sql = "UPDATE tags
           SET (type)
           = ($1)
           WHERE id = $2"
     values = [@type, @id]
     SqlRunner.run(sql, values)
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM tags
+        WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Tag.new(results.first)
   end
 
 end

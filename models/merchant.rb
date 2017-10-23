@@ -34,12 +34,20 @@ class Merchant
     SqlRunner.run(sql, values)
   end
 
-  def update() # *** DOESN'T WORK: ASK WHY (one item an issue?)
+  def update()
     sql = "UPDATE merchants
           SET (name)
           = ($1)
           WHERE id = $2"
     values = [@name, @id]
     SqlRunner.run(sql, values)
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM merchants
+          WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Merchant.new(results.first)
   end
 end
