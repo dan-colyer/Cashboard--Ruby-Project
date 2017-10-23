@@ -87,11 +87,16 @@ class Transaction
     return results.map{|result| Transaction.new(result)}
   end
 
-
+  def self.transactions_by_tag(type)
+    sql = "SELECT tags.type, transactions.* FROM tags
+          INNER JOIN transactions
+          ON tags.id = transactions.tag_id
+          WHERE type = $1"
+    values = [type]
+    results = SqlRunner.run(sql, values)
+    return results.map{|result| Transaction.new(result)}
+  end
 end
-
-# -- SELECT jedi.name, lightsabers.colour FROM jedi
-# -- INNER JOIN lightsabers ON jedi.id = lightsabers.owner_id;
 
 # - Display total amount spent
 # - Display total amount spent by tag
