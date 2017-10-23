@@ -4,16 +4,34 @@
   <thead>
     <tr>
       <th>
-        Col1
+        Description
       </th>
       <th>
-        Col2
+        Merchant
+      </th>
+      <th>
+        Type
+      </th>
+      <th>
+        Amount
+      </th>
+      <th>
+        Date
       </th>
     </tr>
   </thead>
   <tbody>
     <% @transactions.each do |trans| %>
       <tr>
+        <td>
+          <%= trans.description %>
+        </td>
+        <td>
+          <%= trans.merchant_id %>
+        </td>
+        <td>
+          <%= trans.tag_id %>
+        </td>
         <td>
           <%= trans.amount %>
         </td>
