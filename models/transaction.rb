@@ -32,7 +32,7 @@ class Transaction
   end
 
   def self.all()
-    sql = "SELECT * FROM transactions"
+    sql = "SELECT * FROM transactions ORDER BY transaction_date DESC"
     values =[]
     results = SqlRunner.run(sql, values)
     return results.map {|result| Transaction.new(result)}
