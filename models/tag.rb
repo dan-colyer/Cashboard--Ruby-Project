@@ -39,7 +39,7 @@ class Tag
           SET (type)
           = ($1)
           WHERE id = $2"
-    values = [@type]
+    values = [@type, @id]
     SqlRunner.run(sql, values)
   end
 

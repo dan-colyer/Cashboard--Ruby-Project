@@ -39,7 +39,7 @@ class Merchant
           SET (name)
           = ($1)
           WHERE id = $2"
-    values = [@name]
+    values = [@name, @id]
     SqlRunner.run(sql, values)
   end
 end
