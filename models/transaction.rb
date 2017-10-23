@@ -1,6 +1,6 @@
 require_relative('../db/sql_runner.rb')
-require_relative('../models/merchant.rb')
-require_relative('../models/tag.rb')
+require_relative('merchant.rb')
+require_relative('tag.rb')
 
 class Transaction
   attr_reader :id
@@ -77,16 +77,21 @@ class Transaction
     return Tag.new(results.first)
   end
 
+  def self.transactions_by_merchant(name)
+    sql = "SELECT merchants.name, transactions.* FROM merchants
+          INNER JOIN transactions
+          ON merchants.id = transactions.merchant_id
+          WHERE name = $1"
+    values = [name]
+    results = SqlRunner.run(sql, values)
+    return results.map{|result| Transaction.new(result)}
+  end
+
 
 end
 
+# -- SELECT jedi.name, lightsabers.colour FROM jedi
+# -- INNER JOIN lightsabers ON jedi.id = lightsabers.owner_id;
+
 # - Display total amount spent
 # - Display total amount spent by tag
-
-# def victim()
-#   sql = "SELECT * FROM victims
-#   WHERE id = $1"
-#   values = [@victim_id]
-#   results = SqlRunner.run( sql, values )
-#   return Victim.new( results.first )
-# end
