@@ -13,6 +13,7 @@ class Transaction
     @tag_id = options["tag_id"].to_i
     @amount = options["amount"].to_i
     @transaction_date = options["transaction_date"]
+    @budget = 1800
   end
 
   def save()
@@ -128,11 +129,3 @@ class Transaction
     return results.first["sum"].to_f
   end
 end
-
-# SELECT a.[CUSTOMER ID], a.[NAME], SUM(b.[AMOUNT]) AS [TOTAL AMOUNT]
-# FROM RES_DATA a INNER JOIN INV_DATA b
-# ON a.[CUSTOMER ID]=b.[CUSTOMER ID]
-# GROUP BY a.[CUSTOMER ID], a.[NAME]
-
-# - Display total amount spent
-# - Display total amount spent by tag

@@ -1,0 +1,27 @@
+
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        Col1
+      </th>
+      <th>
+        Col2
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @transactions.each do |trans| %>
+      <tr>
+        <td>
+          <%= trans.amount %>
+        </td>
+        <td>
+          <%= trans.transaction_date %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+ 
