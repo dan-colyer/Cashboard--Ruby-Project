@@ -27,10 +27,10 @@
         <% @trans.each do |tran| %>
           <tr>
             <td>
-              <%= tran.merchant_id %>
+              <%= tran.merchant().name %>
             </td>
             <td>
-              <%= tran.tag_id %>
+              <%= tran.tag().type %>
             </td>
             <td>
               <%= tran.description %>

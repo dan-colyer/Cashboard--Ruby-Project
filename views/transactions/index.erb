@@ -83,10 +83,10 @@
     <% @transactions.each do |trans| %>
       <tr>
         <td>
-          <%= trans.merchant_id %>
+          <%= trans.merchant().name %>
         </td>
         <td>
-          <%= trans.tag_id %>
+          <%= trans.tag().type %>
         </td>
         <td>
           <%= trans.description %>
