@@ -1,7 +1,56 @@
 <p>Total Spend (all time): <%= @total %></p>
+<p>Remaining Budget: <%= @budget_minus_total %></p>
+
+
 
 <form class="" action="/transactions" method="post">
-  <button type="button" name="button">Test</button>
+
+  <label for="description-field">Description</label>
+  <input
+  type="text"
+  name="description"
+  id="description-field"
+  />
+
+  <label for="merchant-field">Merchant</label>
+  <select
+  name="merchant_id"
+  id="merchant-field"
+  >
+  <% for merchant in @merchants %>
+    <option value="<%= merchant.id %>">
+      <%= merchant.name %>
+    </option>
+  <% end %>
+  </select>
+
+  <label for="type-field">Type</label>
+  <select
+  name="tag_id"
+  id="tag-field"
+  >
+  <% for tag in @tags %>
+    <option value="<%= tag.id %>">
+      <%= tag.type %>
+    </option>
+  <% end %>
+  </select>
+
+  <label for="amount-field">Amount</label>
+  <input
+  type="text"
+  name="amount"
+  id="amount-field"
+  />
+
+  <label for="date-field">Date</label>
+  <input
+  type="text"
+  name="transaction_date"
+  id="date-field"
+  />
+
+  <input type="submit" value="Add Transaction">
 </form>
 
 <table>

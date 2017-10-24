@@ -13,7 +13,6 @@ class Transaction
     @tag_id = options["tag_id"].to_i
     @amount = options["amount"].to_i
     @transaction_date = options["transaction_date"]
-    @budget = 1800
   end
 
   def save()
@@ -103,6 +102,11 @@ class Transaction
     values = []
     results = SqlRunner.run(sql, values)
     return results.first["sum"].to_f
+  end
+
+  def self.budget_minus_total_spend()
+    remaining_budget = 1800 - (self.total_spend)
+    return remaining_budget
   end
 
   def self.total_spend_by_tag(type)
