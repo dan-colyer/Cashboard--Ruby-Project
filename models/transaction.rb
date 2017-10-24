@@ -87,12 +87,12 @@ class Transaction
     return results.map{|result| Transaction.new(result)}
   end
 
-  def self.transactions_by_tag(type)
+  def self.transactions_by_tag(id)
     sql = "SELECT tags.type, transactions.* FROM tags
           INNER JOIN transactions
           ON tags.id = transactions.tag_id
-          WHERE type = $1"
-    values = [type]
+          WHERE tags.id = $1"
+    values = [id]
     results = SqlRunner.run(sql, values)
     return results.map{|result| Transaction.new(result)}
   end

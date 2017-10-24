@@ -1,0 +1,46 @@
+
+<% @tags.each do |tag| %>
+  <% @trans = Transaction.transactions_by_tag(tag.id) %>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Description
+          </th>
+          <th>
+            Merchant
+          </th>
+          <th>
+            Type
+          </th>
+          <th>
+            Amount
+          </th>
+          <th>
+            Date
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @trans.each do |tran| %>
+          <tr>
+            <td>
+              <%= tran.description %>
+            </td>
+            <td>
+              <%= tran.merchant_id %>
+            </td>
+            <td>
+              <%= tran.tag_id %>
+            </td>
+            <td>
+              <%= tran.amount %>
+            </td>
+            <td>
+              <%= tran.transaction_date %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+<% end %>

@@ -70,5 +70,38 @@ transaction4 = Transaction.new({
   })
 transaction4.save
 
+
+all_tags = Tag.all
+
+for tag in all_tags
+
+  trans = Transaction.transactions_by_tag(tag.id)
+
+  for tran in trans
+
+  end
+
+
+end
+
+# all_tags.each do |tag|
+#   @trans = Transaction.transactions_by_tag(tag.id)
+#
+#     puts "*************"
+#     puts "TAG: " + tag.type
+#     puts "*************"
+#
+#   @trans.each do |tran|
+#     puts "*************"
+#     puts tran.description + " " + tran.amount.to_s
+#     puts "*************"
+#   end
+#
+#   puts "*************"
+#   puts "*************"
+#   puts "*************"
+#
+# end
+
 binding.pry
 nil
