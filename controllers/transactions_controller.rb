@@ -19,3 +19,9 @@ post '/transactions' do
   @transaction.save()
   redirect '/transactions'
 end
+
+post '/transactions/:id/delete' do
+  transaction = Transaction.find(params[:id])
+  transaction.delete()
+  redirect '/transactions'
+end

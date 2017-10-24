@@ -71,6 +71,12 @@
       <th>
         Date
       </th>
+      <th>
+        Edit
+      </th>
+      <th>
+        Delete
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -90,6 +96,14 @@
         </td>
         <td>
           <%= trans.transaction_date %>
+        </td>
+        <td>
+          x
+        </td>
+        <td>
+          <form class="" action="/transactions/<%= trans.id %> /delete" method="post">
+            <input type="submit" value="Delete">
+          </form>
         </td>
       </tr>
     <% end %>
