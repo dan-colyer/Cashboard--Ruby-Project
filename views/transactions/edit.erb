@@ -1,0 +1,52 @@
+<form class="" action="/transactions/<%= @transaction.id %>" method="post">
+
+  <label for="merchant-field">Merchant</label>
+  <select
+  name="merchant_id"
+  id="merchant-field"
+  >
+  <% for merchant in @merchants %>
+    <option value="<%= merchant.id %>" <%= "selected" if merchant.id == @transaction.merchant_id %>>
+      <%= merchant.name %>
+    </option>
+  <% end %>
+  </select>
+
+  <label for="type-field">Type</label>
+  <select
+  name="tag_id"
+  id="tag-field"
+  >
+  <% for tag in @tags %>
+    <option value="<%= tag.id %>" <%= "selected" if tag.id == @transaction.tag_id %>>
+      <%= tag.type %>
+    </option>
+  <% end %>
+  </select>
+
+  <label for="description-field">Description</label>
+  <input
+  type="text"
+  name="description"
+  id="description-field"
+  value="<%= @transaction.description %>"
+  />
+
+  <label for="amount-field">Amount</label>
+  <input
+  type="text"
+  name="amount"
+  id="amount-field"
+  value="<%= @transaction.amount%>"
+  />
+
+  <label for="date-field">Date</label>
+  <input
+  type="text"
+  name="transaction_date"
+  id="date-field"
+  value="<%= @transaction.transaction_date%>"
+  />
+
+  <input type="submit" value="Add Transaction">
+</form>
