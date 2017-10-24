@@ -2,18 +2,18 @@
 <p>Remaining Budget: <%= @budget_minus_total %></p>
 
 <% @merchants.each do |merchant| %>
-  <% @trans = Transaction.transactions_by_tag(merchant.id) %>
+  <% @trans = Transaction.transactions_by_merchant(merchant.id) %>
     <table>
       <thead>
         <tr>
-          <th>
-            Description
-          </th>
           <th>
             Merchant
           </th>
           <th>
             Type
+          </th>
+          <th>
+            Description
           </th>
           <th>
             Amount
@@ -27,13 +27,13 @@
         <% @trans.each do |tran| %>
           <tr>
             <td>
-              <%= tran.description %>
-            </td>
-            <td>
               <%= tran.merchant_id %>
             </td>
             <td>
               <%= tran.tag_id %>
+            </td>
+            <td>
+              <%= tran.description %>
             </td>
             <td>
               <%= tran.amount %>
