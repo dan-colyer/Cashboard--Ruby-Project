@@ -84,24 +84,5 @@ for tag in all_tags
 
 end
 
-# all_tags.each do |tag|
-#   @trans = Transaction.transactions_by_tag(tag.id)
-#
-#     puts "*************"
-#     puts "TAG: " + tag.type
-#     puts "*************"
-#
-#   @trans.each do |tran|
-#     puts "*************"
-#     puts tran.description + " " + tran.amount.to_s
-#     puts "*************"
-#   end
-#
-#   puts "*************"
-#   puts "*************"
-#   puts "*************"
-#
-# end
-
 binding.pry
 nil

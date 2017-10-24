@@ -1,8 +1,8 @@
 <p>Total Spend (all time): <%= @total %></p>
 <p>Remaining Budget: <%= @budget_minus_total %></p>
 
-<% @tags.each do |tag| %>
-  <% @trans = Transaction.transactions_by_tag(tag.id) %>
+<% @merchants.each do |merchant| %>
+  <% @trans = Transaction.transactions_by_tag(merchant.id) %>
     <table>
       <thead>
         <tr>

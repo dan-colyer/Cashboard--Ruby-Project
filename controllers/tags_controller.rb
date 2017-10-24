@@ -13,3 +13,15 @@ get '/tags' do
   @tags = Tag.all()
   erb ( :"tags/index" )
 end
+
+get '/tags/new' do
+  @tags = Tag.all()
+  erb (:"tags/new")
+end
+
+post '/tags/new' do
+  @tag = Tag.new(params)
+  @tag.save()
+  erb (:"tags/new")
+  redirect '/transactions'
+end
