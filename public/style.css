@@ -1,6 +1,6 @@
 h1 {
   font-family: 'Codystar';
-  font-size: 44pt;
+  font-size: 60pt;
   color: #484848;
   padding: 10px 5px;
   margin: 10px;
@@ -12,19 +12,49 @@ body {
 }
 
 p {
+  font-size: 20pt;
   margin: 10px;
 }
 
-/*form {
-  margin: 10px;
-}*/
+.num {
+  font-weight: bold;
+}
+
+.neg_num {
+  color: red;
+}
+
+.pos_num {
+  color: green;
+}
+
+form {
+  margin-left:auto;
+  margin-right:auto;
+}
 
 table {
   margin: 10px;
+  width: 90%;
+  margin-left:auto;
+  margin-right:auto;
+  border-left: 1px dashed #484848;
+}
+
+.right_table {
+  border-right: 1px dashed #484848;
 }
 
 tr:nth-child(even) {
   background-color: #E1E1E1;
+}
+
+tr:hover {
+  background-color: #CFCFCF
+}
+
+table td {
+  border-right: 1px dashed #484848;
 }
 
 .navigation {

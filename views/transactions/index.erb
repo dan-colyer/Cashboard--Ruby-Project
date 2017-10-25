@@ -1,6 +1,20 @@
-<p>Total Spend (all time): <%= @total %></p>
-<p>Remaining Budget: <%= @budget_minus_total %></p>
+<br/>
+<p>Total Spend (all time): <a class="num"><%= @total %></a></p>
+<br/>
+<p>
+  Remaining Budget:
 
+  <% if (@budget_minus_total < 0) %>
+  <a class="num neg_num"> <%= @budget_minus_total %> </a>
+  <% else %>
+  <a class="num pos_num"> <%= @budget_minus_total %> </a>
+  <% end %>
+
+</p>
+<br/>
+<br/>
+<br/>
+<br/>
 
 
 <form class="" action="/transactions" method="post">
@@ -53,6 +67,8 @@
   <input type="submit" value="Add Transaction">
 </form>
 
+<br/>
+
 <table>
   <thead>
     <tr>
@@ -74,7 +90,7 @@
       <th>
         Edit
       </th>
-      <th>
+      <th class="right_table">
         Delete
       </th>
     </tr>
