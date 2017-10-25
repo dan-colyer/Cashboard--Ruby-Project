@@ -1,0 +1,63 @@
+h1 {
+  font-family: 'Codystar';
+  font-size: 44pt;
+  color: #484848;
+  padding: 10px 5px;
+  margin: 10px;
+}
+
+body {
+  font-family: 'Source Code Pro';
+  color: #484848;
+}
+
+p {
+  margin: 10px;
+}
+
+/*form {
+  margin: 10px;
+}*/
+
+table {
+  margin: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #E1E1E1;
+}
+
+.navigation {
+  font-size: 16pt;
+  color: #484848;
+  margin: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E1E1E1;
+}
+
+li {
+    display: inline;
+    float:left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #484848;
+}
+
+/* Change the link color to #C3C3C3 (charcoal, light) on hover */
+li a:hover {
+    background-color: #C3C3C3;
+}
