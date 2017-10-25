@@ -129,7 +129,6 @@ li a:hover {
 .button_standard {
 
     font-family: 'Source Code Pro';
-    background-color: #E1E1E1;
     color: #484848;
     padding: 5px 11px;
     font-size: 14px;
@@ -146,6 +145,18 @@ li a:hover {
     font-size: 14px;
     margin: 4px 2px;
 }*/
+
+.button_add {
+
+    font-family: 'Source Code Pro';
+    background-color: #ACDAAC;
+    color: #484848;
+    padding: 5px 11px;
+    font-size: 12px;
+    margin: 4px 2px;
+    border-width: 0px;
+
+}
 
 .button_delete {
 

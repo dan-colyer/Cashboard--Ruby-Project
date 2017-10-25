@@ -22,8 +22,7 @@ end
 post '/tags/new' do
   @tag = Tag.new(params)
   @tag.save()
-  erb (:"tags/new")
-  redirect '/transactions'
+  redirect '/tags/new'
 end
 
 get '/tags/:id/edit' do
