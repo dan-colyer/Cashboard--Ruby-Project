@@ -29,6 +29,8 @@ p {
 }
 
 form {
+  text-align: center;
+  width: auto;
   margin-left:auto;
   margin-right:auto;
 }
@@ -90,4 +92,44 @@ a:visited {
 /* Change the link color to #C3C3C3 (charcoal, light) on hover */
 li a:hover {
     background-color: #C3C3C3;
+}
+
+.button {
+
+    font-family: 'Source Code Pro';
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button_standard {
+
+    font-family: 'Source Code Pro';
+    background-color: #E1E1E1;
+    color: #484848;
+    padding: 5px 11px;
+    font-size: 14px;
+    margin: 4px 2px;
+}
+
+.button_delete {
+
+    font-family: 'Source Code Pro';
+    background-color: #FFACAC;
+    color: #484848;
+    padding: 5px 11px;
+    font-size: 12px;
+    margin: 4px 2px;
+}
+
+.button_edit {
+
+    font-family: 'Source Code Pro';
+    background-color: #BDBDFF;
+    color: #484848;
+    padding: 5px 11px;
+    font-size: 12px;
+    margin: 4px 2px;
 }

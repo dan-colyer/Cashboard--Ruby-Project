@@ -14,7 +14,6 @@
 <br/>
 <br/>
 <br/>
-<br/>
 
 
 <form class="" action="/transactions" method="post">
@@ -63,8 +62,8 @@
   name="transaction_date"
   id="date-field"
   />
-
-  <input type="submit" value="Add Transaction">
+<br/>
+  <input class="button button_add button_standard" type="submit" value="Add Transaction">
 </form>
 
 <br/>
@@ -97,7 +96,7 @@
   </thead>
   <tbody>
     <% @transactions.each do |trans| %>
-      <tr>
+    <tr>
         <td>
           <%= trans.merchant().name %>
         </td>
@@ -115,12 +114,12 @@
         </td>
         <td>
           <form class="" action="/transactions/<%= trans.id %>/edit" method="get">
-            <input type="submit" value="Edit">
+            <input class="button button_edit" type="submit" value="Edit">
           </form>
         </td>
         <td>
           <form class="" action="/transactions/<%= trans.id %> /delete" method="post">
-            <input type="submit" value="Delete">
+            <input class="button button_delete" type="submit" value="Delete">
           </form>
         </td>
       </tr>
