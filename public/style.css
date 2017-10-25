@@ -1,6 +1,7 @@
 h1 {
   font-family: 'Codystar';
   font-size: 60pt;
+  font-weight: bold;
   color: #484848;
   padding: 10px 5px;
   margin: 10px;
@@ -41,6 +42,26 @@ table {
   margin-left:auto;
   margin-right:auto;
   border-left: 1px dashed #484848;
+  colum
+}
+.header1 {
+  width: 26%;
+}
+
+.header2 {
+  width: 22%;
+}
+
+.header3 {
+  width: 25%;
+}
+
+.header4 {
+  width: 7%;
+}
+
+.header5 {
+  width: 20%;
 }
 
 .right_table {
@@ -94,15 +115,6 @@ li a:hover {
     background-color: #C3C3C3;
 }
 
-.button {
-
-    font-family: 'Source Code Pro';
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-}
 
 .button_standard {
 
@@ -112,7 +124,18 @@ li a:hover {
     padding: 5px 11px;
     font-size: 14px;
     margin: 4px 2px;
+    border-width: 0px;
 }
+
+/*.button_standard:visited {
+
+    font-family: 'Source Code Pro';
+    background-color: #E1E1E1;
+    color: #484848;
+    padding: 5px 11px;
+    font-size: 14px;
+    margin: 4px 2px;
+}*/
 
 .button_delete {
 
@@ -122,6 +145,8 @@ li a:hover {
     padding: 5px 11px;
     font-size: 12px;
     margin: 4px 2px;
+    border-width: 0px;
+
 }
 
 .button_edit {
@@ -132,4 +157,6 @@ li a:hover {
     padding: 5px 11px;
     font-size: 12px;
     margin: 4px 2px;
+    border-width: 0px;
+
 }

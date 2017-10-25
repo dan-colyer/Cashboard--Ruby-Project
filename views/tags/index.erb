@@ -1,23 +1,37 @@
-<p>Total Spend (all time): <%= @total %></p>
-<p>Remaining Budget: <%= @budget_minus_total %></p>
+<br/>
+<p>Total Spend (all time): <a class="num"><%= @total %></a></p>
+<br/>
+<p>
+  Remaining Budget:
+
+  <% if (@budget_minus_total < 0) %>
+  <a class="num neg_num"> <%= @budget_minus_total %> </a>
+  <% else %>
+  <a class="num pos_num"> <%= @budget_minus_total %> </a>
+  <% end %>
+
+</p>
+<br/>
+<br/>
+<br/>
 
 <% @tags.each do |tag| %>
   <% @trans = Transaction.transactions_by_tag(tag.id) %>
     <table>
       <thead>
         <tr>
-          <th>
+          <th class="header1">
             Type
           </th>
-          <th>
+          <th class="header2">
             Merchant
           </th>
-          <th>
+          <th class="header3">
             Description
           </th>
-          <th>
+          <th class="header4">
             Amount
-          </th>
+          </th class="header5">
           <th>
             Date
           </th>
