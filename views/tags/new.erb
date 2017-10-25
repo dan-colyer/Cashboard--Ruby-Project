@@ -8,4 +8,30 @@
   />
 
   <input class="button_standard" type="submit" value="Add Tag">
+
 </form>
+
+    <table>
+      <br/>
+      <thead>
+        <tr>
+          <th class="header1">
+            Type
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @tags.each do |tag| %>
+        <tr>
+            <td>
+              <%= tag.type %>
+            </td>
+            <td>
+              <form class="" action="/tags/<%= tag.id %>/edit" method="get">
+                <input class="button button_edit" type="submit" value="Edit">
+              </form>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>

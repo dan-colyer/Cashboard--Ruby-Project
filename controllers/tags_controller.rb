@@ -25,3 +25,14 @@ post '/tags/new' do
   erb (:"tags/new")
   redirect '/transactions'
 end
+
+get '/tags/:id/edit' do
+  @tags = Tag.find(params[:id])
+  erb(:"tags/edit")
+end
+
+post '/tags/:id' do
+  @tags = Tag.new(params)
+  @tags.update
+  redirect '/tags'
+end

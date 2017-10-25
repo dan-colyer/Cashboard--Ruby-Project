@@ -1,0 +1,12 @@
+<form class="" action="/tags/<%= @tags.id %>" method="post">
+
+  <label for="type-field">Type</label>
+  <input
+  type="text"
+  name="type"
+  id="type-field"
+  value="<%= @tags.type %>"
+  />
+
+  <input type="submit" value="Edit Tag">
+</form>
