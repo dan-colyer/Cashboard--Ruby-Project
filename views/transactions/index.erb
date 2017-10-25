@@ -45,7 +45,7 @@
 
   <label for="date-field">Date</label>
   <input
-  type="text"
+  type="date"
   name="transaction_date"
   id="date-field"
   />
@@ -95,7 +95,7 @@
           <%= trans.amount %>
         </td>
         <td>
-          <%= trans.transaction_date %>
+          <%= trans.pretty_date %>
         </td>
         <td>
           <form class="" action="/transactions/<%= trans.id %>/edit" method="get">

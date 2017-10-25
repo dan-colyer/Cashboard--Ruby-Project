@@ -39,7 +39,7 @@ transaction1 = Transaction.new({
   "merchant_id" => merchant1.id,
   "tag_id" => tag1.id,
   "amount" => 1000,
-  "transaction_date" => "2017-10-22"
+  "transaction_date" => "2019-05-05"
   })
 transaction1.save
 

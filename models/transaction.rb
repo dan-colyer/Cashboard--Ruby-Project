@@ -30,6 +30,12 @@ class Transaction
     @id = results.first()["id"].to_i
   end
 
+  def pretty_date()
+    date = Date.strptime(@transaction_date, "%F")
+    new_format = date.strftime("%d-%m-%y")
+    return new_format
+  end
+
   def self.all()
     sql = "SELECT * FROM transactions ORDER BY transaction_date DESC"
     values =[]
