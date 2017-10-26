@@ -11,7 +11,7 @@ class Transaction
     @description = options["description"]
     @merchant_id = options["merchant_id"].to_i
     @tag_id = options["tag_id"].to_i
-    @amount = options["amount"].to_f
+    @amount = options["amount"].to_f.round(2)
     @transaction_date = options["transaction_date"]
   end
 
@@ -107,12 +107,12 @@ class Transaction
     sql = "SELECT SUM(amount) as sum FROM transactions"
     values = []
     results = SqlRunner.run(sql, values)
-    return results.first["sum"].to_f
+    return results.first["sum"].to_f.round(2)
   end
 
   def self.budget_minus_total_spend()
-    remaining_budget = 1800 - (self.total_spend)
-    return remaining_budget
+    remaining_budget = 1800.00 - (self.total_spend)
+    return remaining_budget.to_f.round(2)
   end
 
   def self.total_spend_by_tag(type)
@@ -124,7 +124,7 @@ class Transaction
           GROUP BY tags.type"
     values = [type]
     results = SqlRunner.run(sql, values)
-    return results.first["sum"].to_f
+    return results.first["sum"].to_f.round(2)
   end
 
   def self.total_spend_by_merchant(name)
@@ -136,6 +136,6 @@ class Transaction
           GROUP BY merchants.name"
     values = [name]
     results = SqlRunner.run(sql, values)
-    return results.first["sum"].to_f
+    return results.first["sum"].to_f.round(2)
   end
 end

@@ -38,8 +38,8 @@ transaction1 = Transaction.new({
   "description" => "Macbook Pro",
   "merchant_id" => merchant1.id,
   "tag_id" => tag1.id,
-  "amount" => 1000,
-  "transaction_date" => "2019-05-05"
+  "amount" => 899.00,
+  "transaction_date" => "2017-10-05"
   })
 transaction1.save
 
@@ -47,7 +47,7 @@ transaction2 = Transaction.new({
   "description" => "skiing",
   "merchant_id" => merchant2.id,
   "tag_id" => tag2.id,
-  "amount" => 110,
+  "amount" => 110.00,
   "transaction_date" => "2017-10-19"
   })
 transaction2.save
@@ -56,7 +56,7 @@ transaction3 = Transaction.new({
   "description" => "weekly shop",
   "merchant_id" => merchant3.id,
   "tag_id" => tag3.id,
-  "amount" => 46,
+  "amount" => 46.00,
   "transaction_date" => "2017-10-19"
   })
 transaction3.save
@@ -65,7 +65,7 @@ transaction4 = Transaction.new({
   "description" => "Apple Home Pod",
   "merchant_id" => merchant1.id,
   "tag_id" => tag1.id,
-  "amount" => 399,
+  "amount" => 399.00,
   "transaction_date" => "2017-10-23"
   })
 transaction4.save

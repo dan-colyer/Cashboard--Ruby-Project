@@ -20,6 +20,6 @@ CREATE TABLE transactions
   description VARCHAR(255),
   merchant_id INT8 references merchants(id) ON DELETE CASCADE,
   tag_id INT8 references tags(id) ON DELETE CASCADE,
-  amount INT8,
+  amount decimal,
   transaction_date DATE
 );
