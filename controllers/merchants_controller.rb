@@ -25,3 +25,14 @@ post '/merchants/new' do
   erb (:"merchants/new")
   redirect '/transactions'
 end
+
+get '/merchants/:id/edit' do
+  @merchants = Merchant.find(params[:id])
+  erb(:"merchants/edit")
+end
+
+post '/merchants/:id' do
+  @merchants = Merchant.new(params)
+  @merchants.update
+  redirect '/merchants'
+end

@@ -1,0 +1,12 @@
+<form class="" action="/merchants/<%= @merchants.id %>" method="post">
+
+  <label for="type-field">Type</label>
+  <input
+  type="text"
+  name="name"
+  id="merchant-field"
+  value="<%= @merchants.name %>"
+  />
+
+  <input type="submit" value="Edit Merchant">
+</form>

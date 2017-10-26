@@ -9,3 +9,28 @@
 
   <input class="button_standard" type="submit" value="Add Merchant">
 </form>
+
+<table>
+  <br/>
+  <thead>
+    <tr>
+      <th class="header1">
+        Merchant
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @merchants.each do |merchant| %>
+    <tr>
+        <td>
+          <%= merchant.name %>
+        </td>
+        <td>
+          <form class="" action="/merchants/<%= merchant.id %>/edit" method="get">
+            <input class="button button_edit" type="submit" value="Edit">
+          </form>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
