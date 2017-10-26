@@ -25,9 +25,24 @@ p {
   color: red;
 }
 
+.neg_num {
+    animation-name: test;
+    animation-duration: 3s;
+}
+
+@keyframes test {
+    from {color: black;
+    font-weight: lighter;}
+    to {color: red;
+    font-weight: bold;}
+}
+
 .pos_num {
   color: green;
+  font-weight: bold;
 }
+
+
 
 form {
   text-align: center;
