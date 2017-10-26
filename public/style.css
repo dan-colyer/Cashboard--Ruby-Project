@@ -26,11 +26,11 @@ p {
 }
 
 .neg_num {
-    animation-name: test;
+    animation-name: neg;
     animation-duration: 1s;
 }
 
-@keyframes test {
+@keyframes neg {
     from {color: black;}
     to {color: red;}
 }
@@ -38,6 +38,16 @@ p {
 .pos_num {
   color: green;
   font-weight: bold;
+}
+
+.pos_num {
+  animation-name: pos;
+  animation-duration: 1s;
+}
+
+@keyframes pos {
+    from {color: black;}
+    to {color: green;}
 }
 
 
