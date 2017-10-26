@@ -17,7 +17,7 @@
 
 <% @merchants.each do |merchant| %>
   <% @trans = Transaction.transactions_by_merchant(merchant.id) %>
-    <table>
+    <table class="all">
       <br/>
       <thead>
         <tr>
