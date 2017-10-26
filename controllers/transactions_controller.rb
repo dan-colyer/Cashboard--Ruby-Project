@@ -17,7 +17,7 @@ end
 post '/transactions' do
   @transaction = Transaction.new(params)
     # ADD 'POSITIVE' AMOUNT, not working
-    # if (@transaction.tag_id == "8")
+    # if (@transaction.tag_id == 1)
     #   @transaction.amount * -1
     # end
   @transaction.save()
