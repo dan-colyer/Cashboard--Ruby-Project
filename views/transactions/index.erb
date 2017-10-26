@@ -1,13 +1,13 @@
 <br/>
-<p>Total Spend (all time): <a class="num">£<%= @total %></a></p>
+<p>Total Spend (all time): <a class="num">£<%= "%.2f" % @total %></a></p>
 <br/>
 <p>
   Remaining Budget:
 
   <% if (@budget_minus_total < 0) %>
-  <a class="num neg_num"> £<%= @budget_minus_total %> </a>
+  <a class="num neg_num"> £<%= "%.2f" % @budget_minus_total %> </a>
   <% else %>
-  <a class="num pos_num"> £<%= @budget_minus_total %> </a>
+  <a class="num pos_num"> £<%= "%.2f" % @budget_minus_total %> </a>
   <% end %>
 
 </p>
@@ -107,7 +107,7 @@
           <%= trans.description %>
         </td>
         <td>
-          <%= trans.amount %>
+          <%= "%.2f" % trans.amount %>
         </td>
         <td>
           <%= trans.pretty_date %>
