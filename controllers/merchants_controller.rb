@@ -20,10 +20,11 @@ get '/merchants/new' do
 end
 
 post '/merchants/new' do
+  @merchants = Merchant.all()
   @merchant = Merchant.new(params)
   @merchant.save()
   erb (:"merchants/new")
-  redirect '/transactions'
+  redirect '/merchants/new'
 end
 
 get '/merchants/:id/edit' do
