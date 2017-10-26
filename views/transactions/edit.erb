@@ -15,7 +15,7 @@
   <label for="type-field">Type</label>
   <select
   name="tag_id"
-  id="tag-field"
+  id="type-field"
   >
   <% for tag in @tags %>
     <option value="<%= tag.id %>" <%= "selected" if tag.id == @transaction.tag_id %>>
@@ -42,7 +42,7 @@
 
   <label for="date-field">Date</label>
   <input
-  type="text"
+  type="date"
   name="transaction_date"
   id="date-field"
   value="<%= @transaction.transaction_date%>"
