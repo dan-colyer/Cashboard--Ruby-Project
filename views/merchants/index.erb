@@ -60,4 +60,13 @@
         <% end %>
       </tbody>
     </table>
+
+    <p>
+      <a class="tag_merchant_totals">
+        Total <%= merchant.name %> Spend:
+          <span class="bold-text">£<%= @trans.sum {|tran| tran.amount} %></span>
+      <a>
+    </p>
+    <br/>
+    <br/>
 <% end %>
