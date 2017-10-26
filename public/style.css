@@ -27,14 +27,12 @@ p {
 
 .neg_num {
     animation-name: test;
-    animation-duration: 3s;
+    animation-duration: 1s;
 }
 
 @keyframes test {
-    from {color: black;
-    font-weight: lighter;}
-    to {color: red;
-    font-weight: bold;}
+    from {color: black;}
+    to {color: red;}
 }
 
 .pos_num {
@@ -169,7 +167,7 @@ li a:hover {
     background-color: #C3C3C3;
 }
 
-
+/* BUTTONS */
 .button_standard {
 
     font-family: 'Source Code Pro';
@@ -179,16 +177,6 @@ li a:hover {
     margin: 4px 2px;
     border-width: 0px;
 }
-
-/*.button_standard:visited {
-
-    font-family: 'Source Code Pro';
-    background-color: #E1E1E1;
-    color: #484848;
-    padding: 5px 11px;
-    font-size: 14px;
-    margin: 4px 2px;
-}*/
 
 .button_add {
 
@@ -200,6 +188,10 @@ li a:hover {
     margin: 4px 2px;
     border-width: 0px;
 
+}
+
+.button_standard:hover {
+    background-color: #8AAE8A;
 }
 
 .button_delete {
@@ -214,6 +206,10 @@ li a:hover {
 
 }
 
+.button_delete:hover {
+  background-color: #CC8A8A;
+}
+
 .button_edit {
 
     font-family: 'Source Code Pro';
@@ -224,4 +220,8 @@ li a:hover {
     margin: 4px 2px;
     border-width: 0px;
 
+}
+
+.button_edit:hover {
+  background-color: #7AA6B3;
 }
