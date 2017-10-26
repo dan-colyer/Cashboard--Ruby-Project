@@ -42,7 +42,7 @@
         <% @trans.each do |tran| %>
           <tr>
             <td>
-              <%= tran.merchant().name %>
+              <span class="bold-text"><%= tran.merchant().name %></span>
             </td>
             <td>
               <%= tran.tag().type %>
@@ -67,6 +67,8 @@
           <span class="bold-text">£<%= @trans.sum {|tran| tran.amount} %></span>
       <a>
     </p>
+    <br/>
+    <br/>
     <br/>
     <br/>
 <% end %>
