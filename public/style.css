@@ -118,6 +118,10 @@ table.tag_merchant {
   width: 100px;
 }
 
+.tag_merchant_totals {
+  color: red;
+}
+
 .navigation {
   font-size: 16pt;
   color: #484848;
