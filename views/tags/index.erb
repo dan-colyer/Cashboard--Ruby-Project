@@ -17,7 +17,7 @@
 
 <% @tags.each do |tag| %>
   <% @trans = Transaction.transactions_by_tag(tag.id) %>
-    <table class="all">
+    <table class="all tag_merchant">
       <br/
       <thead>
         <tr>
@@ -32,8 +32,8 @@
           </th>
           <th class="header4">
             Amount
-          </th class="header5">
-          <th>
+          </th>
+          <th  class="header5">
             Date
           </th>
         </tr>

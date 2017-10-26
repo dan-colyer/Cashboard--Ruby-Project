@@ -88,6 +88,7 @@ table.all {
 
 .header5 {
   width: 20%;
+  border-right: 1px dashed #484848;
 }
 
 .right_table {
@@ -128,15 +129,17 @@ table.tag_merchant {
 
 .tag_merchant_totals {
   font-size: 18pt;
+  font-weight: bold;
   text-align: right;
   /*margin-left: 50%;
   margin-right: 20%;*/
   position: absolute;
   right: 10%;
+  z-index: -1;
 }
 
 .bold-text {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .navigation {
