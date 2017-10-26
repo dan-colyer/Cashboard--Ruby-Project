@@ -70,19 +70,5 @@ transaction4 = Transaction.new({
   })
 transaction4.save
 
-
-all_tags = Tag.all
-
-for tag in all_tags
-
-  trans = Transaction.transactions_by_tag(tag.id)
-
-  for tran in trans
-
-  end
-
-
-end
-
-binding.pry
-nil
+# binding.pry
+# nil

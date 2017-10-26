@@ -33,5 +33,5 @@ end
 post '/tags/:id' do
   @tags = Tag.new(params)
   @tags.update
-  redirect '/tags'
+  redirect '/tags/new'
 end

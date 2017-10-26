@@ -28,19 +28,6 @@ class Merchant
     return results.map {|result| Merchant.new(result)}
   end
 
-  # def self.unique_all()
-  #   sql = "SELECT * FROM merchants"
-  #   values =[]
-  #   results = SqlRunner.run(sql, values)
-  #   name_array = results.map {|merchant| merchant[:name]}
-  #   results_unique = name_array.uniq
-  #   return name_array.length
-  # end
-  #
-  #   results = array.map {|merchant| merchant[:name]}
-  # result_uniq = results.uniq
-  # return result_uniq
-
   def delete()
     sql = "DELETE FROM merchants
           WHERE id = $1"
