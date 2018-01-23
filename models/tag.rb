@@ -37,7 +37,7 @@ class Tag
   def update()
     sql = "UPDATE tags
           SET (type)
-          = ($1)
+          = ROW($1)
           WHERE id = $2"
     values = [@type, @id]
     SqlRunner.run(sql, values)

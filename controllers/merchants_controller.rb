@@ -33,6 +33,6 @@ end
 
 post '/merchants/:id' do
   @merchants = Merchant.new(params)
-  @merchants.update
+  @merchants.update()
   redirect '/merchants/new'
 end
