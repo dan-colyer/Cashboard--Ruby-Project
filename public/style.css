@@ -239,3 +239,64 @@ li a:hover {
   background-color: #7AA6B3;
 }
 
+.tri-color-line {
+  height: 10px;
+  background: #ac2341;
+  background: -moz-linear-gradient(
+    left,
+    #ac2341 0%,
+    #ac2341 30%,
+    #e55d28 30%,
+    #e55d28 60%,
+    #bfd52c 60%,
+    #bfd52c 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0%, #ac2341),
+    color-stop(30%, #ac2341),
+    color-stop(30%, #e55d28),
+    color-stop(60%, #e55d28),
+    color-stop(60%, #bfd52c),
+    color-stop(100%, #bfd52c)
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #ac2341 0%,
+    #ac2341 30%,
+    #e55d28 30%,
+    #e55d28 60%,
+    #bfd52c 60%,
+    #bfd52c 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    #ac2341 0%,
+    #ac2341 30%,
+    #e55d28 30%,
+    #e55d28 60%,
+    #bfd52c 60%,
+    #bfd52c 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    #ac2341 0%,
+    #ac2341 30%,
+    #e55d28 30%,
+    #e55d28 60%,
+    #bfd52c 60%,
+    #bfd52c 100%
+  );
+  background: linear-gradient(
+    to right,
+    #ac2341 0%,
+    #ac2341 30%,
+    #e55d28 30%,
+    #e55d28 60%,
+    #bfd52c 60%,
+    #bfd52c 100%
+  );
+}
+
