@@ -241,62 +241,62 @@ li a:hover {
 
 .tri-color-line {
   height: 10px;
-  background: #ac2341;
+  background: #89AE8B;
   background: -moz-linear-gradient(
     left,
-    #ac2341 0%,
-    #ac2341 30%,
-    #e55d28 30%,
-    #e55d28 60%,
-    #bfd52c 60%,
-    #bfd52c 100%
+    #89AE8B 0%,
+    #89AE8B 30%,
+    #CE898A 30%,
+    #CE898A 60%,
+    #77A6B2 60%,
+    #77A6B2 100%
   );
   background: -webkit-gradient(
     linear,
     left top,
     right top,
-    color-stop(0%, #ac2341),
-    color-stop(30%, #ac2341),
-    color-stop(30%, #e55d28),
-    color-stop(60%, #e55d28),
-    color-stop(60%, #bfd52c),
-    color-stop(100%, #bfd52c)
+    color-stop(0%, #89AE8B),
+    color-stop(30%, #89AE8B),
+    color-stop(30%, #CE898A),
+    color-stop(60%, #CE898A),
+    color-stop(60%, #77A6B2),
+    color-stop(100%, #77A6B2)
   );
   background: -webkit-linear-gradient(
     left,
-    #ac2341 0%,
-    #ac2341 30%,
-    #e55d28 30%,
-    #e55d28 60%,
-    #bfd52c 60%,
-    #bfd52c 100%
+    #89AE8B 0%,
+    #89AE8B 30%,
+    #CE898A 30%,
+    #CE898A 60%,
+    #77A6B2 60%,
+    #77A6B2 100%
   );
   background: -o-linear-gradient(
     left,
-    #ac2341 0%,
-    #ac2341 30%,
-    #e55d28 30%,
-    #e55d28 60%,
-    #bfd52c 60%,
-    #bfd52c 100%
+    #89AE8B 0%,
+    #89AE8B 30%,
+    #CE898A 30%,
+    #CE898A 60%,
+    #77A6B2 60%,
+    #77A6B2 100%
   );
   background: -ms-linear-gradient(
     left,
-    #ac2341 0%,
-    #ac2341 30%,
-    #e55d28 30%,
-    #e55d28 60%,
-    #bfd52c 60%,
-    #bfd52c 100%
+    #89AE8B 0%,
+    #89AE8B 30%,
+    #CE898A 30%,
+    #CE898A 60%,
+    #77A6B2 60%,
+    #77A6B2 100%
   );
   background: linear-gradient(
     to right,
-    #ac2341 0%,
-    #ac2341 30%,
-    #e55d28 30%,
-    #e55d28 60%,
-    #bfd52c 60%,
-    #bfd52c 100%
+    #89AE8B 0%,
+    #89AE8B 30%,
+    #CE898A 30%,
+    #CE898A 60%,
+    #77A6B2 60%,
+    #77A6B2 100%
   );
 }
 
