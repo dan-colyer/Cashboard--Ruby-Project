@@ -240,7 +240,10 @@ li a:hover {
 }
 
 .tri-color-line {
-  height: 10px;
+  height: 7px;
+  width: 500px;
+  margin: 0px 10px;
+
   background: #89AE8B;
   background: -moz-linear-gradient(
     left,
